@@ -10,9 +10,9 @@ class BST(object):
         return self.preorder_search(self.root,find_val)
     def preorder_search(self,current,find_val):
         if current:
-            if current.value > find_val:
+            if current.value < find_val:
                 return self.preorder_search(current.right,find_val)
-            elif current.value < find_val:
+            elif current.value > find_val:
                 return  self.preorder_search(current.left, find_val)
             else:
                 return True
